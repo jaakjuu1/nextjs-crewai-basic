@@ -10,7 +10,7 @@ class CompanyResearchAgents():
     def __init__(self):
         self.searchInternetTool = SerperDevTool()
         self.youtubeSearchTool = YoutubeVideoSearchTool()
-        self.llm = ChatOpenAI(model="gpt-4-turbo-preview")
+        self.llm = ChatOpenAI(model="gpt-4o-mini")
 
     def research_manager(self, companies: List[str], positions: List[str]) -> Agent:
         return Agent(

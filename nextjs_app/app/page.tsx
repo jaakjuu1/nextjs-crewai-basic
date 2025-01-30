@@ -30,7 +30,9 @@ export default function Home() {
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">Output</h2>
             <button
-              onClick={() => crewJob.startJob()}
+              onClick={async () => {
+                await crewJob.startJob();
+              }}
               className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm"
               disabled={crewJob.running}
             >

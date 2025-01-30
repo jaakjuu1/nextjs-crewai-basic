@@ -73,7 +73,9 @@ export const useCrewJob = () => {
     };
 
     if (currentJobId !== "") {
-      intervalId = setInterval(fetchJobStatus, 1000) as unknown as number;
+      setTimeout(() => {
+        intervalId = setInterval(fetchJobStatus, 2000) as unknown as number;
+      }, 1000);
     }
 
     return () => {
